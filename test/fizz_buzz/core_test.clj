@@ -8,4 +8,7 @@
   (testing "with 2"
     (is (= "1\n2\n" (fizz-buzz-printer 2))))
   (testing "from 1 - 3"
-    (is (= "1\n2\nFizz\n" (fizz-buzz-printer 3)))))
+    (is (= "1\n2\nFizz\n" (fizz-buzz-printer 3))))
+  (testing "from 1 - 4"
+    (is (= "1\n2\nFizz\n4\n" (fizz-buzz-printer 4))))
+  )
