@@ -11,4 +11,6 @@
     (is (= "1\n2\nFizz\n" (fizz-buzz-printer 3))))
   (testing "from 1 - 4"
     (is (= "1\n2\nFizz\n4\n" (fizz-buzz-printer 4))))
+  (testing "from 3 - 4"
+    (is (= "Fizz\n4\n" (fizz-buzz-printer 3 4))))
   )

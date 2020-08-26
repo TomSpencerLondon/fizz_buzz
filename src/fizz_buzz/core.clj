@@ -11,6 +11,8 @@
      (if (< current limit)
        (fizz-buzz-printer product (+ 1 current) limit)
        product)))
+  ([start limit]
+   (fizz-buzz-printer "" start limit))
   ([limit]
    (fizz-buzz-printer "" 1 limit)))
 
