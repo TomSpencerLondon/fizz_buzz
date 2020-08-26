@@ -2,6 +2,7 @@
 
 (defn- format-output [output current]
   (cond
+    (= 0 (mod current 15)) (str output "FizzBuzz\n")
     (= 0 (mod current 3)) (str output "Fizz\n")
     (= 0 (mod current 5)) (str output "Buzz\n")
     :else (str output current "\n")))
