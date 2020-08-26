@@ -1,11 +1,10 @@
 (ns fizz-buzz.core)
 
 (defn- format-output [output current]
-  (if (= 3 current)
-    (str output "Fizz\n")
-    (if (= 5 current)
-      (str output "Buzz\n")
-      (str output current "\n"))))
+  (cond
+    (= 3 current) (str output "Fizz\n")
+    (= 5 current) (str output "Buzz\n")
+    :else (str output current "\n")))
 
 (defn fizz-buzz-printer
   ([output current limit]
