@@ -2,7 +2,10 @@
 
 (defn fizz-buzz-printer
   ([output current limit]
-   (let [product (str output current "\n")]
+   (let [product (if (= 3 current)
+                   (str output "Fizz\n")
+                   (str output current "\n")
+                   )]
      (if (< current limit)
        (fizz-buzz-printer product (+ 1 current) limit)
        product)))
