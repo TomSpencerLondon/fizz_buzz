@@ -1,11 +1,13 @@
 (ns fizz-buzz.core)
 
+(defn- format-output [output current]
+  (if (= 3 current)
+    (str output "Fizz\n")
+    (str output current "\n")))
+
 (defn fizz-buzz-printer
   ([output current limit]
-   (let [product (if (= 3 current)
-                   (str output "Fizz\n")
-                   (str output current "\n")
-                   )]
+   (let [product (format-output output current)]
      (if (< current limit)
        (fizz-buzz-printer product (+ 1 current) limit)
        product)))
